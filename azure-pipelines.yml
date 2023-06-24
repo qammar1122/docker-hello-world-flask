@@ -25,7 +25,7 @@ stages:
     - task: Docker@0
       inputs:
         containerregistrytype: 'Azure Container Registry'
-        azureSubscription: 'yamlauth'
+        azureSubscription: 'qammar3083'
         azureContainerRegistry: '{"loginServer":"yamlbased.azurecr.io", "id" : "/subscriptions/31a20a99-7ef9-42d8-9284-faa7cf41169e/resourceGroups/YamlTest/providers/Microsoft.ContainerRegistry/registries/yamlbased"}'
         action: 'Build an image'
         dockerFile: '$(build.sourcesDirectory)/Dockerfile'
@@ -34,7 +34,7 @@ stages:
     - task: Docker@0
       inputs:
         containerregistrytype: 'Azure Container Registry'
-        azureSubscription: 'yamlauth'
+        azureSubscription: 'qammar3083'
         azureContainerRegistry: '{"loginServer":"yamlbased.azurecr.io", "id" : "/subscriptions/31a20a99-7ef9-42d8-9284-faa7cf41169e/resourceGroups/YamlTest/providers/Microsoft.ContainerRegistry/registries/yamlbased"}'
         action: 'Push an image'
         imageName: '$(imageName)'   
